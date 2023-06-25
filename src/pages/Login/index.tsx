@@ -1,4 +1,4 @@
-import AuthLayout from "../../components/layouts/authLayout";
+import AuthLayout from "../../components/layouts/AuthLayout/authLayout";
 
 export default function Login(): JSX.Element {
   return (
