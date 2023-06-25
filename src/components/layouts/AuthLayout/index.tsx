@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import Logo from "../../base/Logo";
 
-import { AuthBackground } from "./styles";
+import { AuthBackground, AuthContent, AuthWrapper } from "./styles";
 
 interface AuthLayoutProps {
   children: ReactNode;
@@ -16,18 +16,19 @@ export default function AuthLayout({
 }: AuthLayoutProps): JSX.Element {
   return (
     <AuthBackground>
-      <main>
+      <AuthWrapper>
         <header>
           <Logo />
         </header>
-      </main>
-      <section>
-        <div>
-          <h2>{title}</h2>
-          <p>{subtitle}</p>
-          {children}
-        </div>
-      </section>
+
+        <AuthContent>
+          <div>
+            <h2>{title}</h2>
+            <p>{subtitle}</p>
+            {children}
+          </div>
+        </AuthContent>
+      </AuthWrapper>
     </AuthBackground>
   );
 }
