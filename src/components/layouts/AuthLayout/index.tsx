@@ -9,7 +9,7 @@ interface AuthLayoutProps {
   title: string;
   subtitle: string;
 }
-export default function AuthLayout({
+export function AuthLayout({
   children,
   title,
   subtitle,

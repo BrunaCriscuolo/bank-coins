@@ -2,7 +2,8 @@ import { Link } from "../../components/forms/Link";
 import { Button } from "../../components/forms/button";
 import { Form } from "../../components/forms/form";
 import { Input } from "../../components/forms/input";
-import AuthLayout from "../../components/layouts/AuthLayout";
+
+import { AuthLayout } from "../../components/layouts/AuthLayout";
 
 export default function Login(): JSX.Element {
   return (
