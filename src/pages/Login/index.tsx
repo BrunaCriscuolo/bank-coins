@@ -1,3 +1,4 @@
+import { Form } from "../../components/forms/form";
 import AuthLayout from "../../components/layouts/AuthLayout";
 
 export default function Login(): JSX.Element {
@@ -6,7 +7,9 @@ export default function Login(): JSX.Element {
       title="Login"
       subtitle="Gerenciar suas entradas e saídas nunca foi tão simples."
     >
-      <p>teste</p>
+      <Form>
+        <p>teste</p>
+      </Form>
     </AuthLayout>
   );
 }

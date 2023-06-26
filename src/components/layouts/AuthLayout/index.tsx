@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import Logo from "../../base/Logo";
+import { Logo } from "../../base/Logo";
 
 import { AuthBackground, AuthContent, AuthWrapper } from "./styles";
 
