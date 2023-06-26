@@ -1,3 +1,4 @@
+import { Button } from "../../components/forms/button";
 import { Form } from "../../components/forms/form";
 import { Input } from "../../components/forms/input";
 import AuthLayout from "../../components/layouts/AuthLayout";
@@ -11,6 +12,7 @@ export default function Login(): JSX.Element {
       <Form>
         <Input placeholder="E-mail" type="email" />
         <Input placeholder="Senha" type="senha" />
+        <Button>Entrar</Button>
       </Form>
     </AuthLayout>
   );
