@@ -14,7 +14,7 @@ body{
     background-color: ${({ theme }) => theme["gray-600"]};
     color: ${({ theme }) => theme["gray-300"]};
 }
-body, input-security, button {
+body, input, button {
     font: 400 1rem "Roboto", sans-serif;
 }
 `;
