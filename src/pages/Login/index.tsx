@@ -15,7 +15,9 @@ export default function Login(): JSX.Element {
         <Input placeholder="E-mail" type="email" />
         <Input placeholder="Senha" type="senha" />
         <Link label="Não tem conta? Cadastre-se aqui." href="/register" />
-        <Button type="submit">Entrar</Button>
+        <Button type="submit" styleButton="large-primary">
+          Entrar
+        </Button>
       </Form>
     </AuthLayout>
   );

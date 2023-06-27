@@ -8,8 +8,12 @@ export function Header(): JSX.Element {
     <HeaderContainer>
       <HeaderContent>
         <Logo />
-        <Button type="button">Nova Categoria</Button>
-        <Button type="button">Nova Transação</Button>
+        <Button type="button" styleButton="small-default">
+          Nova Categoria
+        </Button>
+        <Button type="button" styleButton="small-primary">
+          Nova Transação
+        </Button>
       </HeaderContent>
       <Avatar
         src="https://avatars.githubusercontent.com/u/36765987?v=4"
