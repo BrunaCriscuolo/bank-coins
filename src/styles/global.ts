@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean }>`
     box-shadow: 0 0 0 2px ${({ theme }) => theme["yellow-500"]};
 }
 body{
-    background-color: ${({ theme }) => theme["gray-500"]};
+    background-color: ${({ theme }) => theme["gray-600"]};
     color: ${({ theme }) => theme["gray-300"]};
 }
 body, input, button {
