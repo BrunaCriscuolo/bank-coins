@@ -1,5 +1,10 @@
 import { ReactNode } from "react";
-import { ButtonForm, LargePrimaryButton, SmallDefaultButton } from "./styles";
+import {
+  ButtonForm,
+  LargePrimaryButton,
+  SmallDefaultButton,
+  SmallPrimaryButton,
+} from "./styles";
 
 interface GetButtonProps {
   styleButton: "large-primary" | "small-primary" | "small-default";
@@ -19,7 +24,7 @@ export function Button({
         <LargePrimaryButton type={type}>{children}</LargePrimaryButton>
       ),
       "small-primary": (
-        <LargePrimaryButton type={type}>{children}</LargePrimaryButton>
+        <SmallPrimaryButton type={type}>{children}</SmallPrimaryButton>
       ),
       "small-default": (
         <SmallDefaultButton type={type}>{children}</SmallDefaultButton>

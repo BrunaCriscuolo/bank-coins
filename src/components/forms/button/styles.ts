@@ -76,3 +76,16 @@ export const SmallDefaultButton = styled(ButtonForm)`
     color: ${({ theme }) => theme["yellow-500"]};
   }
 `;
+
+export const SmallPrimaryButton = styled(SmallDefaultButton)`
+  background: ${({ theme }) => theme["yellow-300"]};
+  color: ${({ theme }) => theme["gray-600"]};
+
+  border: 0;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background: ${({ theme }) => theme["yellow-500"]};
+    color: ${({ theme }) => theme["gray-600"]};
+  }
+`;
