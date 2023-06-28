@@ -1,35 +1,26 @@
-import { ReactNode } from "react";
-import {
-  ButtonForm,
-  LargePrimaryButton,
-  SmallDefaultButton,
-  SmallPrimaryButton,
-} from "./styles";
+import { ReactNode, ButtonHTMLAttributes } from "react";
+import { StyleButton } from "./styles";
 
-interface GetButtonProps {
-  styleButton: "large-primary" | "small-primary" | "small-default";
-}
-interface ButtonProps extends GetButtonProps {
+interface ButtonProps
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "styleButton"> {
   children: ReactNode;
-  type: "button" | "submit" | "reset";
+  type: "button" | "submit" | "reset" | undefined;
+  styleButton?: "btn-primary" | "btn-default" | "btn-primary-form";
 }
+
 export function Button({
   children,
   type,
-  styleButton = "large-primary",
+  styleButton = "btn-primary-form",
+  ...props
 }: ButtonProps): JSX.Element {
-  const getButtonByType = ({ styleButton }: GetButtonProps) =>
-    ({
-      "large-primary": (
-        <LargePrimaryButton type={type}>{children}</LargePrimaryButton>
-      ),
-      "small-primary": (
-        <SmallPrimaryButton type={type}>{children}</SmallPrimaryButton>
-      ),
-      "small-default": (
-        <SmallDefaultButton type={type}>{children}</SmallDefaultButton>
-      ),
-    }[styleButton] || <ButtonForm type={type}>{children}</ButtonForm>);
-
-  return <>{getButtonByType({ styleButton })}</>;
+  const className =
+    styleButton === "btn-primary" || styleButton === "btn-default"
+      ? `btn-base ${styleButton}`
+      : styleButton;
+  return (
+    <StyleButton type={type} className={className} {...props}>
+      {children}
+    </StyleButton>
+  );
 }
