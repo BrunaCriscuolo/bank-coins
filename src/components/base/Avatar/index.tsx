@@ -1,4 +1,4 @@
-import { AvatarWrapper } from "./styles";
+import { AvatarContainer, AvatarWrapper } from "./styles";
 
 interface AvatarProps {
   src: string;
@@ -6,5 +6,9 @@ interface AvatarProps {
 }
 
 export function Avatar({ src, alt }: AvatarProps): JSX.Element {
-  return <AvatarWrapper src={src} alt={alt} />;
+  return (
+    <AvatarContainer>
+      <AvatarWrapper src={src} alt={alt} />
+    </AvatarContainer>
+  );
 }

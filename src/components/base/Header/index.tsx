@@ -9,10 +9,10 @@ export function Header(): JSX.Element {
       <HeaderContent>
         <Logo />
         <div>
-          <Button type="button" styleButton="btn-primary">
+          <Button type="button" styleButton="btn-default">
             Nova Categoria
           </Button>
-          <Button type="button" styleButton="btn-default">
+          <Button type="button" styleButton="btn-primary">
             Nova Transação
           </Button>
         </div>

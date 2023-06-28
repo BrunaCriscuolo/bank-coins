@@ -1,8 +1,12 @@
 import styled from "styled-components";
-
-export const AvatarWrapper = styled.img`
+export const AvatarContainer = styled.button`
   width: 3.5rem;
   height: 3.5rem;
+  border-radius: 50%;
+  border: 0;
+`;
+export const AvatarWrapper = styled.img`
+  width: 100%;
   border-radius: 50%;
 
   border: 2px solid transparent;
