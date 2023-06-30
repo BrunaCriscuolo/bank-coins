@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
-import { CardSumaryContainer, Title, Value } from "./styles";
+import { CardSumaryContainer, CardSumaryWrapper } from "./styles";
+import { Currency } from "../Currency";
 
 interface CardSumaryProps {
   title: string;
@@ -14,9 +15,11 @@ export function CardSumary({
 }: CardSumaryProps): JSX.Element {
   return (
     <CardSumaryContainer>
-      <Title>{title}</Title>
-      <Value>{value}</Value>
-      {children}
+      <CardSumaryWrapper>
+        <span>{title}</span>
+        {children}
+      </CardSumaryWrapper>
+      <Currency value={value} />
     </CardSumaryContainer>
   );
 }
