@@ -1,4 +1,4 @@
-import { Button } from "../../forms/button";
+import { Button } from "../../forms/Button";
 import { Avatar } from "../Avatar";
 import { Logo } from "../Logo";
 import { HeaderContainer, HeaderContent } from "./styles";
@@ -9,10 +9,10 @@ export function Header(): JSX.Element {
       <HeaderContent>
         <Logo />
         <div>
-          <Button type="button" styleButton="btn-default">
+          <Button type="button" variant="default">
             Nova Categoria
           </Button>
-          <Button type="button" styleButton="btn-primary">
+          <Button type="button" variant="primary">
             Nova Transação
           </Button>
         </div>

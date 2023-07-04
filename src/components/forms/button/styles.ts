@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
+import { ButtonFormProps } from '.';
 
-export const ButtonForm = styled.button`
+export const ButtonForm = styled.button<ButtonFormProps>`
   border-radius: 6px;
   border-width: 1px;
   border-style: solid;
@@ -10,10 +11,10 @@ export const ButtonForm = styled.button`
   &:hover {
     cursor: pointer;
   }
-`;
 
-export const StyleButton = styled(ButtonForm)`
-  &.btn-primary-form {
+  ${({ variant }) =>
+    variant === "primary-form" &&
+    css`
     background: ${({ theme }) => theme["yellow-300"]};
     border-color: ${({ theme }) => theme["yellow-300"]};
 
@@ -26,13 +27,15 @@ export const StyleButton = styled(ButtonForm)`
       background: ${({ theme }) => theme["yellow-500"]};
       border: 1px solid ${({ theme }) => theme["yellow-500"]};
     }
-  }
-  &.btn-base {
-    height: 50px;
-    padding: 0 1.25rem;
-    margin-right: 1rem;
+  `};
 
-    &.btn-primary {
+  ${({ variant }) =>
+    variant === "primary" &&
+    css`
+      height: 50px;
+      padding: 0 1.25rem;
+      margin-right: 1rem;
+
       background: ${({ theme }) => theme["yellow-300"]};
       color: ${({ theme }) => theme["gray-600"]};
 
@@ -43,9 +46,15 @@ export const StyleButton = styled(ButtonForm)`
         background: ${({ theme }) => theme["yellow-500"]};
         color: ${({ theme }) => theme["gray-600"]};
       }
-    }
+  `};
 
-    &.btn-default {
+  ${({ variant }) =>
+    variant === "default" &&
+    css`
+      height: 50px;
+      padding: 0 1.25rem;
+      margin-right: 1rem;
+
       background: ${({ theme }) => theme["gray-500"]};
       border-color: transparent;
       color: ${({ theme }) => theme.white};
@@ -57,6 +66,5 @@ export const StyleButton = styled(ButtonForm)`
         border-color: ${({ theme }) => theme["yellow-500"]};
         color: ${({ theme }) => theme["yellow-500"]};
       }
-    }
-  }
+  `};
 `;

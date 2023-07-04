@@ -1,7 +1,7 @@
 import { Link } from "../../components/forms/Link";
-import { Button } from "../../components/forms/button";
-import { Form } from "../../components/forms/form";
-import { Input } from "../../components/forms/input";
+import { Button } from "../../components/forms/Button";
+import { Form } from "../../components/forms/Form";
+import { Input } from "../../components/forms/Input";
 
 import { AuthLayout } from "../../components/layouts/AuthLayout";
 
@@ -16,7 +16,7 @@ export default function Register(): JSX.Element {
         <Input placeholder="E-mail" type="email" />
         <Input placeholder="Senha" type="password" />
         <Link label="Já possui conta? Faça login aqui." href="/login" />
-        <Button>Criar conta</Button>
+        <Button type="submit" variant="primary-form">Criar conta</Button>
       </Form>
     </AuthLayout>
   );
