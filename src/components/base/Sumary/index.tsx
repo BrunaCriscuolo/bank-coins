@@ -12,7 +12,7 @@ export function Sumary(): JSX.Element {
       <CardSumary title="Saídas" value={17000.0}>
         <ArrowCircleDown size={32} color={defaultTheme["red-500"]} />
       </CardSumary>
-      <CardSumary title="Total" value={400.0}>
+      <CardSumary title="Total" value={400.0} variant="balance">
         <CurrencyDollar size={32} color={defaultTheme["yellow-500"]} />
       </CardSumary>
     </SumaryContainer>
