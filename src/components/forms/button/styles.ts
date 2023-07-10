@@ -50,6 +50,15 @@ const getStylesByVariant = ({ variant }: ButtonFormProps) => ({
       border: 1px solid ${({ theme }) => theme["yellow-500"]};
     }
   `,
+  'transparent': css`
+    border: 0;
+    padding: 0;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0;
+    background-color: transparent;
+  `,
 }[variant] || css`
       ${baseStyle}
 `)

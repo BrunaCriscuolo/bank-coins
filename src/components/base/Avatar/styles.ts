@@ -1,13 +1,24 @@
-import styled from "styled-components";
-export const AvatarContainer = styled.button`
-  width: 3.5rem;
-  height: 3.5rem;
+import styled, { css } from "styled-components";
+import { UserAvatarProps } from '.';
+
+const getStylesByVariant = ({ variant }: UserAvatarProps) => ({
+  'large': css`
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+  `,
+  'small': css`
+    width: 3.5rem;
+    height: 3.5rem;
+`,
+}[variant] || css`
+    width: 3.5rem;
+    height: 3.5rem;
+`)
+
+export const AvatarWrapper = styled.img<UserAvatarProps>`
   border-radius: 50%;
   border: 0;
-`;
-export const AvatarWrapper = styled.img`
-  width: 100%;
-  border-radius: 50%;
 
   border: 2px solid transparent;
   box-shadow: 0px 0px 10px 10px #00000010;
@@ -22,4 +33,6 @@ export const AvatarWrapper = styled.img`
     border: 2px solid ${({ theme }) => theme["yellow-500"]};
     box-shadow: 0px 0px 10px 10px #00000015;
   }
+
+  ${({ variant }) => getStylesByVariant({ variant })}
 `;

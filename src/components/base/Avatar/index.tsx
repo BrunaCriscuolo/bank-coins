@@ -1,14 +1,15 @@
-import { AvatarContainer, AvatarWrapper } from "./styles";
+import { AvatarWrapper } from "./styles";
 
-interface AvatarProps {
+export interface UserAvatarProps {
+  variant: 'large' | 'small';
+}
+interface AvatarProps extends UserAvatarProps {
   src: string;
   alt: string;
 }
 
-export function Avatar({ src, alt }: AvatarProps): JSX.Element {
+export function Avatar({ src, alt, variant = 'small' }: AvatarProps): JSX.Element {
   return (
-    <AvatarContainer>
-      <AvatarWrapper src={src} alt={alt} />
-    </AvatarContainer>
+    <AvatarWrapper src={src} alt={alt} variant={variant} />
   );
 }

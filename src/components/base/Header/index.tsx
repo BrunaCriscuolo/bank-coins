@@ -6,6 +6,8 @@ import { Avatar } from "../Avatar";
 import { Dialog } from '../Dialog';
 import { Logo } from "../Logo";
 import { HeaderContainer, HeaderContent } from "./styles";
+import { Form } from '../../forms/Form';
+import { Input } from '../../forms/Input';
 
 export function Header(): JSX.Element {
   const newCategoryButton: ReactNode = (
@@ -20,10 +22,13 @@ export function Header(): JSX.Element {
   );
 
   const userAvatar: ReactNode = (
-    <Avatar
-      src="https://avatars.githubusercontent.com/u/36765987?v=4"
-      alt="avatar profile"
-    />
+    <Button type="button" variant="transparent">
+      <Avatar
+        src="https://avatars.githubusercontent.com/u/36765987?v=4"
+        alt="avatar profile"
+        variant="small"
+      />
+    </Button>
   );
 
   return (
@@ -40,7 +45,19 @@ export function Header(): JSX.Element {
         </div>
       </HeaderContent>
       <Dialog title='Meu Perfil' trigger={userAvatar}>
-        <p>Isso é um teste</p>
+        <Form>
+          <Avatar
+            src="https://avatars.githubusercontent.com/u/36765987?v=4"
+            alt="avatar profile"
+            variant="large"
+          />
+          <Input placeholder="E-mail" type="email" />
+          <Input placeholder="Senha" type="senha" />
+
+          <Button type="submit" variant="primary-form">
+            Atualizar
+          </Button>
+        </Form>
       </Dialog>
     </HeaderContainer>
   );
