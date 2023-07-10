@@ -21,7 +21,7 @@ export const SearchInput = styled.input`
   padding: 1rem;
 
   &::placeholder {
-    color: ${({ theme }) => theme['gray-500']};
+    color: ${({ theme }) => theme['gray-400']};
   }
 `;
 

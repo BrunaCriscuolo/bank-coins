@@ -1,18 +1,32 @@
 
+import { ReactNode } from 'react';
 import * as DialogBase from '@radix-ui/react-dialog';
+import { Close, Content, Overlay } from './styles';
+import { X } from 'phosphor-react';
+interface DialogProps {
+  children?: ReactNode;
+  trigger: ReactNode;
+  title: string;
+}
 
-//volta para a aula do modal 01
-export function Dialog(): JSX.Element {
+export function Dialog({ children, title, trigger }: DialogProps): JSX.Element {
   return (
     <DialogBase.Root>
-      <DialogBase.Trigger />
+      <DialogBase.Trigger asChild>
+        {trigger}
+      </DialogBase.Trigger>
       <DialogBase.Portal>
-        <DialogBase.Overlay />
-        <DialogBase.Content>
-          <DialogBase.Title />
+        <Overlay />
+        <Content>
+          <DialogBase.Title>
+            {title}
+          </DialogBase.Title>
           <DialogBase.Description />
-          <DialogBase.Close />
-        </DialogBase.Content>
+          <Close>
+            <X size={24} />
+          </Close>
+          {children}
+        </Content>
       </DialogBase.Portal>
     </DialogBase.Root>
   )

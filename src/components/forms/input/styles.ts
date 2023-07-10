@@ -6,6 +6,7 @@ export const InputForm = styled.input`
 
   border: 0;
   border-radius: 6px;
+  width: 100%;
 
   padding: 1rem;
 
