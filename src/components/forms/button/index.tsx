@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { ButtonForm } from "./styles";
 
 export interface ButtonFormProps {
-  variant: "primary" | "default" | "primary-form" | "transparent" | "income" | "outcome";
+  variant: "primary" | "default" | "primary-form" | "transparent";
 }
 
 interface ButtonProps extends ButtonFormProps {

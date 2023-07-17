@@ -59,12 +59,6 @@ const getStylesByVariant = ({ variant }: ButtonFormProps) => ({
     margin: 0;
     background-color: transparent;
   `,
-  'income': css`
-
-  `,
-  'outcome': css`
-
-  `,
 }[variant] || css`
       ${baseStyle}
 `)

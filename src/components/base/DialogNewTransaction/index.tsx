@@ -6,6 +6,8 @@ import { Dialog } from '../Dialog';
 import { Form } from '../../forms/Form';
 import { Input } from '../../forms/Input';
 import { ArrowCircleDown, ArrowCircleUp } from 'phosphor-react';
+import { RadioButton } from '../../forms/RadioButton';
+import { RadioButtonGroup } from '../../forms/RadioButtonGroup';
 
 export function DialogNewTransaction(): JSX.Element {
   const newTransactionButton: ReactNode = (
@@ -21,16 +23,16 @@ export function DialogNewTransaction(): JSX.Element {
         <Input placeholder="Preço" type="number" required />
         <Input placeholder="Categoria" type="text" required />
 
-        <div>
-          <Button type="button" variant="income">
+        <RadioButtonGroup>
+          <RadioButton variant="income" value='income'>
             <ArrowCircleUp size={24} />
             Entrada
-          </Button>
-          <Button type="button" variant="outcome">
+          </RadioButton>
+          <RadioButton variant="outcome" value='outcome'>
             <ArrowCircleDown size={24} />
             Saída
-          </Button>
-        </div>
+          </RadioButton>
+        </RadioButtonGroup>
 
         <Button type="submit" variant="primary-form">
           Cadastrar
