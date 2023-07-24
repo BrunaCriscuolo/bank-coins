@@ -1,19 +1,19 @@
 import { styled } from "styled-components";
 
 export const SearchFormContainer = styled.form`
-  grid-column: 2 / 3;
-  grid-template-columns: 1fr 1.5rem auto;
-  
-  width: 100%;
+   width: 100%;
   max-width: 1120px;
   margin: 3rem auto 0;
 
   display: flex;
   gap: 1rem;
+
+  @media screen and (max-width: 1440px) {
+    max-width: 1024px;
+  }
 `;
 
 export const SearchInput = styled.input`
-  grid-column: 1 / 2;
   flex: 1;
   border-radius: 6px;
   border: 0;
@@ -27,8 +27,6 @@ export const SearchInput = styled.input`
 `;
 
 export const ButtonSearch = styled.button`
-  grid-column: 3 / 4;
-
   display: flex;
   align-items: center;
   gap: 0.75rem;
