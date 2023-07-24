@@ -2,6 +2,8 @@ import { styled, css } from "styled-components";
 import { CardSumaryContainerProps } from ".";
 
 export const CardSumaryContainer = styled.div<CardSumaryContainerProps>`
+  flex: 1;
+  height: 140px;
   background-color: ${({ theme }) => theme["gray-500"]};
   border-radius: 6px;
   padding: 2rem;

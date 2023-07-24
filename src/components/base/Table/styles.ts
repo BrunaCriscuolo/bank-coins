@@ -6,9 +6,6 @@ export const Table = styled.table`
   border-spacing: 0 0.5rem;
 
   td {
-    padding: 1.25rem 2rem;
-    background: ${({ theme }) => theme['gray-500']};
-
     &:first-child {
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
@@ -18,5 +15,19 @@ export const Table = styled.table`
       border-top-right-radius: 6px;
       border-bottom-right-radius: 6px;
     }
+  }
+
+  thead {
+    td {
+    padding: 1rem 2rem;
+    background: transparent;
+  }
+  }
+
+  tbody {
+    td {
+    padding: 1.25rem 2rem;
+    background: ${({ theme }) => theme['gray-500']};
+  }
   }
 `;

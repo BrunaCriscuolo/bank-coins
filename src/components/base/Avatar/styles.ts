@@ -8,23 +8,21 @@ const getStylesByVariant = ({ variant }: UserAvatarProps) => ({
     margin-bottom: 1rem;
   `,
   'small': css`
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.1rem;
+    height: 3.1rem;
 `,
 }[variant] || css`
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.1rem;
+    height: 3.1rem;
 `)
 
 export const AvatarWrapper = styled.img<UserAvatarProps>`
+
   border-radius: 50%;
-  border: 0;
+  /*border: 0;
 
   border: 2px solid transparent;
   box-shadow: 0px 0px 10px 10px #00000010;
-  grid-column: 3 / 4;
-  display: flex;
-  justify-self: flex-end;
 
   transition: all 0.3s;
 
@@ -32,7 +30,7 @@ export const AvatarWrapper = styled.img<UserAvatarProps>`
     cursor: pointer;
     border: 2px solid ${({ theme }) => theme["yellow-500"]};
     box-shadow: 0px 0px 10px 10px #00000015;
-  }
+  }*/
 
   ${({ variant }) => getStylesByVariant({ variant })}
 `;

@@ -7,8 +7,9 @@ export const SearchFormContainer = styled.form`
   width: 100%;
   max-width: 1120px;
   margin: 3rem auto 0;
-  padding: 0 1.5rem;
-  display: grid;
+
+  display: flex;
+  gap: 1rem;
 `;
 
 export const SearchInput = styled.input`

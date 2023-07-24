@@ -54,10 +54,15 @@ const getStylesByVariant = ({ variant }: ButtonFormProps) => ({
     border: 0;
     padding: 0;
     border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
     margin: 0;
     background-color: transparent;
+    display: flex;
+
+    @media screen and (min-width: 1440px) {
+      position: absolute;
+      height: auto;
+      right: -6rem;
+    }
   `,
 }[variant] || css`
       ${baseStyle}

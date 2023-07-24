@@ -13,6 +13,12 @@ export default function Home(): JSX.Element {
       <Search placeholder='Buscar por transações' type='text' />
       <TransactionsContainer>
         <Table>
+          <thead>
+            <td>Descrição</td>
+            <td>Preço</td>
+            <td>Categoria</td>
+            <td>Data</td>
+          </thead>
           <tbody>
             <tr>
               <td width="50%">Desenvolvimento de site</td>

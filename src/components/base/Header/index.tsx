@@ -14,8 +14,8 @@ export function Header(): JSX.Element {
           <DialogNewCategory />
           <DialogNewTransaction />
         </div>
+        <DialogProfile />
       </HeaderContent>
-      <DialogProfile />
     </HeaderContainer>
   );
 }
